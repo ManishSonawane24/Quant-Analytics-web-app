@@ -1,0 +1,132 @@
+# ===============================
+# Quant Analytics Web App - .gitignore
+# ===============================
+# This file ignores files that should not be tracked in version control:
+# - Python cache files, virtual environments
+# - Database files (SQLite with trading data)
+# - Uploaded CSV/NDJSON files
+# - Streamlit cache and config
+# - IDE-specific files
+# ===============================
+
+# ===============================
+# Python
+# ===============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+*.cover
+.hypothesis/
+
+# ===============================
+# Virtual Environments
+# ===============================
+venv/
+.env/
+.venv/
+
+# ===============================
+# OS / Editor
+# ===============================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ===============================
+# Logs
+# ===============================
+*.log
+logs/
+
+# ===============================
+# Databases / Data
+# ===============================
+*.db
+*.sqlite
+*.sqlite3
+
+# ===============================
+# Streamlit
+# ===============================
+# Ignore cache and secrets, but keep config.toml tracked
+.streamlit/cache/
+.streamlit/secrets.toml
+.streamlit/credentials.toml
+# Explicitly track config.toml (created for the project)
+!.streamlit/config.toml
+
+# ===============================
+# Cache / Temp
+# ===============================
+.cache/
+.pytest_cache/
+
+# ===============================
+# Jupyter (if any)
+# ===============================
+.ipynb_checkpoints/
+
+# ===============================
+# Exports / Downloads
+# ===============================
+data/
+exports/
+*.csv
+*.ndjson
+*.json.bak
+
+# ===============================
+# Project-specific
+# ===============================
+# Reference HTML files (keep reference_binance_collector.html tracked, ignore others)
+*_collector*.html
+!reference_binance_collector.html
+
+# Uploaded data files
+uploads/
+*.uploaded
+
+# Backtest results
+backtests/
+*.backtest
+
+# Runtime data
+*.pid
+*.sock
+*.tmp
+
+# Process files
+*.lock
+*.lockb
+
+# ===============================
+# Secrets (just in case)
+# ===============================
+.env
+*.env
+
+# ===============================
+# Build / Distribution
+# ===============================
+build/
+dist/
+# Note: *.egg-info/ already covered in Python section above
